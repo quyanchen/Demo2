@@ -1,0 +1,21 @@
+{
+  "train_file": "data/msra/train_5k.txt",
+  "dev_file": "data/msra/dev_1k.txt",
+  "test_file": "data/msra/test_1k.txt",
+  "model_name_or_path": "google-bert/bert-base-chinese",
+  "cache_dir": "D:\\1Code\\1Model\\huggingface",
+  "dropout": 0.1,
+  "epochs": 3,
+  "batch_size": 16,
+  "learning_rate": 2e-05,
+  "weight_decay": 0.01,
+  "warmup_ratio": 0.1,
+  "max_length": 128,
+  "grad_clip": 1.0,
+  "seed": 42,
+  "patience": 3,
+  "device": "auto",
+  "output_dir": "outputs/msra_bert_base/20261011_184127",
+  "swanlab_project": "demo2-ner",
+  "experiment_name": "msra_bert_base"
+}

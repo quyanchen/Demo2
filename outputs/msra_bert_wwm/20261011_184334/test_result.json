@@ -1,0 +1,27 @@
+{
+  "micro_f1": 0.9021,
+  "micro_precision": 0.925,
+  "micro_recall": 0.8803,
+  "macro_f1": 0.9036,
+  "classes": {
+    "LOC": {
+      "precision": 0.908,
+      "recall": 0.8592,
+      "f1": 0.8829,
+      "support": 632
+    },
+    "ORG": {
+      "precision": 0.9069,
+      "recall": 0.8358,
+      "f1": 0.8699,
+      "support": 268
+    },
+    "PER": {
+      "precision": 0.9662,
+      "recall": 0.9501,
+      "f1": 0.9581,
+      "support": 361
+    }
+  },
+  "total_entities": 1261
+}

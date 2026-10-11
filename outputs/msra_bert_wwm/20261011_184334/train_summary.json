@@ -1,0 +1,46 @@
+{
+  "best_epoch": 2,
+  "best_dev_micro_f1": 0.9288,
+  "history": {
+    "epoch": [
+      1,
+      2,
+      3
+    ],
+    "train_loss": [
+      0.281,
+      0.0269,
+      0.0121
+    ],
+    "val_loss": [
+      0.0361,
+      0.0377,
+      0.0336
+    ],
+    "val_precision": [
+      0.8801,
+      0.9404,
+      0.9121
+    ],
+    "val_recall": [
+      0.9049,
+      0.9175,
+      0.9293
+    ],
+    "val_micro_f1": [
+      0.8923,
+      0.9288,
+      0.9206
+    ],
+    "val_macro_f1": [
+      0.8893,
+      0.9262,
+      0.9184
+    ]
+  },
+  "test_loss": 0.0481,
+  "test_precision": 0.925,
+  "test_recall": 0.8803,
+  "test_micro_f1": 0.9021,
+  "test_macro_f1": 0.9036
+}

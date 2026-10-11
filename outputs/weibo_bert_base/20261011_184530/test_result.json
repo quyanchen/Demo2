@@ -1,0 +1,57 @@
+{
+  "micro_f1": 0.6497,
+  "micro_precision": 0.6439,
+  "micro_recall": 0.6555,
+  "macro_f1": 0.4109,
+  "classes": {
+    "GPE.NAM": {
+      "precision": 0.6842,
+      "recall": 0.8864,
+      "f1": 0.7723,
+      "support": 44
+    },
+    "GPE.NOM": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 2
+    },
+    "LOC.NAM": {
+      "precision": 0.5714,
+      "recall": 0.2105,
+      "f1": 0.3077,
+      "support": 19
+    },
+    "LOC.NOM": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 8
+    },
+    "ORG.NAM": {
+      "precision": 0.3953,
+      "recall": 0.4359,
+      "f1": 0.4146,
+      "support": 39
+    },
+    "ORG.NOM": {
+      "precision": 0.5,
+      "recall": 0.3125,
+      "f1": 0.3846,
+      "support": 16
+    },
+    "PER.NAM": {
+      "precision": 0.6789,
+      "recall": 0.7184,
+      "f1": 0.6981,
+      "support": 103
+    },
+    "PER.NOM": {
+      "precision": 0.6864,
+      "recall": 0.7342,
+      "f1": 0.7095,
+      "support": 158
+    }
+  },
+  "total_entities": 389
+}
