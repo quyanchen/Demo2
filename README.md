@@ -2,6 +2,13 @@
 
 基于 PyTorch 和 Hugging Face `BertModel` 实现的中文命名实体识别项目，支持 **Weibo** 和 **MSRA** 两个数据集，以及 `bert-base-chinese` 和 `chinese-bert-wwm-ext` 两种预训练模型。
 
+### 本次修改说明 - V2
+
+1. **重构评价指标**：参考 W2NER 写法，直接统计预测对的数、预测总数和真实总数，用 $2 \times \text{正确数} / (\text{预测数} + \text{真实数})$ 计算 F1。
+2. **合并工具函数**：将类外的 `extract_entities_from_bio` 和 `print_metrics_table` 合并进 `NERMetric` 作为静态方法。
+3. **固定依赖版本**：在 `requirements.txt` 中固定版本。
+4. **调大微博截断长度**：微博最长样本有 175 字，原 96 长度会截断样本；现统一调为 192。
+
 ## 1. 目录结构
 
 ```text
