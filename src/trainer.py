@@ -4,7 +4,7 @@ import swanlab
 import torch
 from tqdm import tqdm
 
-from .metrics import print_metrics_table
+from .metrics import NERMetric
 from .utils import save_json
 
 
@@ -173,7 +173,7 @@ class NERTrainer:
                 self.model.load_state_dict(state_dict)
             print(f"\nEvaluating best checkpoint (Epoch {self.best_epoch}) on test set...")
             test_loss, test_results = self.evaluate(self.test_loader, desc="Testing")
-            print_metrics_table(test_results)
+            NERMetric.print_metrics_table(test_results)
             save_json(test_results, self.output_dir / "test_result.json")
             summary["test_loss"] = round(test_loss, 4)
             summary["test_precision"] = test_results["micro_precision"]

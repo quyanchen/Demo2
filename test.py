@@ -5,7 +5,7 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm
 from transformers import AutoTokenizer
 
-from src import BertForNER, NERCollator, NERConfig, NERDataset, NERMetric, get_device, print_metrics_table, save_json
+from src import BertForNER, NERCollator, NERConfig, NERDataset, NERMetric, get_device, save_json
 
 
 def parse_args():
@@ -44,7 +44,7 @@ def main():
             metric.update(outputs["logits"], batch["labels"])
 
     results = metric.compute()
-    print_metrics_table(results)
+    NERMetric.print_metrics_table(results)
 
     out_file = checkpoint_dir / "test_result.json"
     save_json(results, out_file)

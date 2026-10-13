@@ -3,7 +3,7 @@ from pathlib import Path
 import torch
 from transformers import AutoTokenizer
 
-from src import BertForNER, NERConfig, extract_entities_from_bio, get_device
+from src import BertForNER, NERConfig, NERMetric, get_device
 
 
 class NERPredictor:
@@ -39,7 +39,7 @@ class NERPredictor:
                 current_word_idx = word_id
                 char_tags[word_id] = self.model.id2label[pred_ids[token_idx]]
 
-        extracted = extract_entities_from_bio(char_tags)
+        extracted = NERMetric.extract_entities_from_bio(char_tags)
         results = []
         for ent_type, start, end in sorted(extracted, key=lambda x: x[1]):
             results.append({"entity": text[start:end], "type": ent_type, "start": start, "end": end})
